@@ -1,0 +1,167 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\input{pisika.dat}
+
+%  Editorial staff will uncomment the next line
+% \input{staff.hed}
+
+
+\begin{document}
+
+%--------------------------------------------------------------------------
+%  fill in the paper's title, author(s), and corresponding institutions
+%--------------------------------------------------------------------------
+\providecommand{\ShortAuthorList}[0]{David Beinhauer}
+\title{Differences between Acetylcholinesterase Inhibitors}
+\author[1,*]{David Beinhauer}
+\affil[1]{Faculty of Science, Bioinformatics, Praque, Czech republic}
+\affil[*]{david.beinhauer@email.cz}
+
+\date{\dateline{}}
+
+\begin{abstract}
+\noindent
+%---------------------------------------------------------------------------
+%               Include abstract and keywords here
+%---------------------------------------------------------------------------
+
+The goal of this project is to compare two structures of human acetylcholinesterase
+(AchE), focused on active sites. Each of the structure binds different ligand. 
+The selected
+ligands are inhibitors used in the treatment of the Alzheimer's disease. The idea is to
+compare the active site iteractions and point out the differences between them. The
+choosen structures are 4EY6 and 4EY7. The ligand in the first structures is 
+galanthamine (GNT), in the second structure is dopenezil (E20). 
+
+
+\DOI{} % do not delete this line
+\end{abstract}
+
+\maketitle
+\thispagestyle{titlestyle}
+
+%---------------------------------------------------------------------------
+%               the main text of your paper begins here
+%---------------------------------------------------------------------------
+
+
+\section*{Introduction}
+
+Alzheimer's disease (AD) is a chronic, progressive, neurodegenerative disorder of the 
+brain characterized clinically by deterioration in the key symptoms of activities 
+of daily living (ADLs), behavior, and cognition. Based on the 
+cholinergic hypothesis\textsuperscript{\cite{bartus1982cholinergic}},
+the cognitive decline in AD is a result of the deficits in central cholinergic 
+neurotransmission resulting from a loss of acetylcholine (Ach).
+
+Normally, the actions of Ach are terminated by a specific mechanism 
+to keep the target cells from becoming overactivated. Acetylcholine is 
+destroyed by an enzyme\textsuperscript{\cite{KOMERSOVA2005387}}, 
+acetylcholinesterase (AchE), that is located in every 
+Ach synapse. The defect course of enzymatic hydrolysis of 
+Ach is considered to be one of the possible reasons of 
+AD\textsuperscript{\cite{KOMERSOVA2005387}}. 
+Cholinesterase inhibitors enhance central cholinergic 
+function, and their usage remains the standard approach to the symptomatic 
+treatment of AD\textsuperscript{\cite{grossberg2003cholinesterase}}.
+
+In our work, we focus on two commonly AChE inhibitors for the symptomatic 
+treatment of AD, galanthamine and dopenezil. Mainly, we focus on the binding site
+interactions of these inhibitors with human AchE, and we will point out the 
+differences between these interactions.
+
+
+
+\section*{Methods}
+
+\subsection*{Used structures}
+Two molecular structures of human AchE binded with different ligands were 
+used. PDB code of protein-ligand complex AchE with galanthamine 
+(PDB code: GNT) is 4EY6. PDB code of complex AchE with dopenezil 
+(PDB code: E20) is 4EY7. AchE is a homodimer. Each chain contains 
+binding site for the selected ligands. Both structures were crystalized
+using the same approach in the study presenting several crystal 
+structures of AchE in complexes with drug 
+ligands\textsuperscript{\cite{doi:10.1021/jm300871x}}. Resolution of 
+4EY6 is 2.4\AA, resolution of 4EY7 is 2.35\AA. Based on PDB validation
+report, quality of both structures are reasonably good and in all studied
+metrics result above average quality.
+
+Besides the mentioned ligands GNT and E20, the structures contains other ligands.
+The structure 4EY6 contains besides GNT also PE8, NAG, EDO and NO3 ligands. 
+The structure 4EY7 contains besides E20 also NAG, EDO and NO3 ligands. Presence 
+of these ligands is not mentioned in the original 
+study\textsuperscript{\cite{doi:10.1021/jm300871x}}. Possible explanation of 
+presence of PE8, EDO and NO3 might be that these are crystallization artifacts.
+The bonded oligosaccharide NAG might be result of post-translational 
+modifications of the protein. As our study is focused on the interaction of GNT 
+(respectively E020) and these additional ligands do not interact with our focused
+protein-ligand interaction, we do not investigate these interactions more profoundly.
+
+
+\subsection*{Methods and Workflow}
+Acetylcholinesterase structures were investigated using the program PyMOL. First, 
+we aligned the structures to verify its similarity. Then, we hid one of the 
+chains (as it is homodimer), and we showed the AchE 
+surface focused mainly on the binding side where the selected
+ligands bind. Furthermore, we found the polar contact between the protein and 
+the ligands, and we measured the distances of the bounds. 
+Finally, we filter out the protein suroundings and focus only on the 
+structure around the ligands.
+
+
+
+\section*{Results}
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics[width=0.98\linewidth]{images/alignment.png}
+  \caption{\textbf{Structure Comparision:} 
+  Comparision of the structures 4EY6 (green) and 4EY7 (blue).}
+  \label{fig:map_variants}
+\end{figure} 
+
+
+
+% \begin{figure}[tb]
+%   \centering
+%   \includegraphics[width=0.98\linewidth]{images/maze_variants.pdf}
+%   \caption{\textbf{Varianty prostředí modelu:} 
+%   Zobrazení variant prostředí modelu použitých v experimentech. 
+%   Barevně rozlišujeme objekty v prostředí (viz. legenda).
+%   \textbf{a} Varianta \texttt{var-0}, 
+%   \textbf{b} varianta \texttt{var-1},
+%   \textbf{c} varianta \texttt{var-2},
+%   \textbf{d} varianta \texttt{var-3},
+%   \textbf{e} varianta \texttt{var-4},
+%   \textbf{f} varianta \texttt{var-5}.}
+%   \label{fig:map_variants}
+% \end{figure} 
+
+
+% \begin{table}[t]
+%   \centering % center-align tables within a column
+%   \begin{tabular}{l p{5cm}}
+%   \toprule
+%   Proměnná & Popis \\
+%   \midrule
+%     \texttt{map\_object} & Objekt v buňce (možnosti:
+%     volno, překážka, potrava, hnízdo). \\
+%     \texttt{food\_pheromone} & Hladina feromonu pro sběr potravy.\\
+%     \texttt{nest\_pheromone} & Hladina feromonu pro návrat do mraveniště.\\	
+%   \bottomrule
+%   \end{tabular}
+%   \caption{Seznam promměnných jedné buňky mapy simulace.} \label{table:mapa} 
+% \end{table}
+
+
+
+
+
+% Please use pisikabst.bst. You may your own *.bib file.
+\clearpage
+\bibliographystyle{pisikabst}
+\bibliography{bibfile}
+
+
+\end{document}
