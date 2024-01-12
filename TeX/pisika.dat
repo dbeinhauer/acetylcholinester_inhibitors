@@ -48,9 +48,9 @@
 \newcolumntype{d}[1]{D{.}{.}{#1}}
 
 \usepackage{caption}
-%\renewcommand{\tablename}{Tabulka}
+\renewcommand{\tablename}{Table}
 \captionsetup[table]{position=above,font={rm,small},labelfont=bf}
-%\renewcommand{\figurename}{Obrázek}
+\renewcommand{\figurename}{Figure}
 \captionsetup[figure]{font={rm,small},labelfont=bf}
 
 % for citations formatting style

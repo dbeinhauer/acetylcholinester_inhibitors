@@ -65,7 +65,7 @@ Cholinesterase inhibitors enhance central cholinergic
 function, and their usage remains the standard approach to the symptomatic 
 treatment of AD\textsuperscript{\cite{grossberg2003cholinesterase}}.
 
-In our work, we focus on two commonly AChE inhibitors for the symptomatic 
+In this work, we focus on two commonly used AChE inhibitors for the symptomatic 
 treatment of AD, galanthamine and dopenezil. Mainly, we focus on the binding site
 interactions of these inhibitors with human AchE, and we will point out the 
 differences between these interactions.
@@ -87,7 +87,7 @@ ligands\textsuperscript{\cite{doi:10.1021/jm300871x}}. Resolution of
 report, quality of both structures are reasonably good and in all studied
 metrics result above average quality.
 
-Besides the mentioned ligands GNT and E20, the structures contains other ligands.
+Besides the mentioned ligands GNT and E20, the structures contain other ligands.
 The structure 4EY6 contains besides GNT also PE8, NAG, EDO and NO3 ligands. 
 The structure 4EY7 contains besides E20 also NAG, EDO and NO3 ligands. Presence 
 of these ligands is not mentioned in the original 
@@ -106,56 +106,163 @@ chains (as it is homodimer), and we showed the AchE
 surface focused mainly on the binding side where the selected
 ligands bind. Furthermore, we found the polar contact between the protein and 
 the ligands, and we measured the distances of the bounds. 
-Finally, we filter out the protein suroundings and focus only on the 
-structure around the ligands.
+Finally, we filtered out the protein suroundings and focus only on the 
+structure around the ligands. The finding of the polar contacts, the
+measurement of the distances as well as visualizations were done 
+by the appropriate functions in PyMOL.
 
 
 
 \section*{Results}
 
+When comparing both structures as whole, we can see almost perfect 
+match between the structures (Figure \ref{fig:alignment}). Both 
+structure models were created for the same study using the same 
+methods, so, the high similarity is not very surprising.
+
+
 \begin{figure}[tb]
-  \centering
-  \includegraphics[width=0.98\linewidth]{images/alignment.png}
-  \caption{\textbf{Structure Comparision:} 
-  Comparision of the structures 4EY6 (green) and 4EY7 (blue).}
-  \label{fig:map_variants}
+    \centering
+    \includegraphics[width=0.98\linewidth]{images/alignment.png}
+    \caption{\textbf{Structure Comparision:} 
+    Comparision of the structures 4EY6 (green) and 4EY7 (blue).}
+    \label{fig:alignment}
+  \end{figure} 
+  
+
+From now on, we focus only on the protein-ligand binding-site. 
+First, we compare the structures based on the surfaces 
+(Figure \ref{fig:surfaces}). We can see that the bindig-site 
+is quite narrow and profound. Also, we observe the significant 
+difference of shape and position of the ligands. The ligand GNT is 
+short and circular-like shaped. On the other hand, E20 is much 
+taller and its structure looks more like string. We can better see
+the difference in shapes of ligands in the figure 
+\ref{fig:ligands_overlap}. Also, we need to point out the slight 
+misplacement of the amino acids of the protein in the binding-site.
+This might be the result of the measurement error as well as different
+conformation changes cause by the ligation of different ligand.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{images/surface_4ey6.png}
+    \\[\smallskipamount]
+    \includegraphics[width=0.98\linewidth]{images/surface_4ey7.png}
+    \caption{\textbf{Binding-site Surfaces:} 
+    Comparision of protein binding-site surfaces of structures 4EY6 (green) 
+    ligated with GNT (red) and 4EY7 (blue) ligated with E20 (yellow).}
+    \label{fig:surfaces}
 \end{figure} 
 
 
-
-% \begin{figure}[tb]
-%   \centering
-%   \includegraphics[width=0.98\linewidth]{images/maze_variants.pdf}
-%   \caption{\textbf{Varianty prostředí modelu:} 
-%   Zobrazení variant prostředí modelu použitých v experimentech. 
-%   Barevně rozlišujeme objekty v prostředí (viz. legenda).
-%   \textbf{a} Varianta \texttt{var-0}, 
-%   \textbf{b} varianta \texttt{var-1},
-%   \textbf{c} varianta \texttt{var-2},
-%   \textbf{d} varianta \texttt{var-3},
-%   \textbf{e} varianta \texttt{var-4},
-%   \textbf{f} varianta \texttt{var-5}.}
-%   \label{fig:map_variants}
-% \end{figure} 
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{images/ligands_overlap_1.png}
+    \\[\smallskipamount]
+    \includegraphics[width=0.98\linewidth]{images/ligands_overlap_2.png}
+    \caption{\textbf{Ligands position comparision} 
+    Comparision of positions of ligands in the protein binding-site 
+    surroundings of the structures 4EY6 (green) ligated with GNT (red) 
+    and 4EY7 (blue) ligated with E20 (yellow).}
+    \label{fig:ligands_overlap}
+\end{figure} 
 
 
-% \begin{table}[t]
-%   \centering % center-align tables within a column
-%   \begin{tabular}{l p{5cm}}
-%   \toprule
-%   Proměnná & Popis \\
-%   \midrule
-%     \texttt{map\_object} & Objekt v buňce (možnosti:
-%     volno, překážka, potrava, hnízdo). \\
-%     \texttt{food\_pheromone} & Hladina feromonu pro sběr potravy.\\
-%     \texttt{nest\_pheromone} & Hladina feromonu pro návrat do mraveniště.\\	
-%   \bottomrule
-%   \end{tabular}
-%   \caption{Seznam promměnných jedné buňky mapy simulace.} \label{table:mapa} 
-% \end{table}
+Next, we focus on the binding interactions of the protein-ligand 
+complex. First, we investigate the structure 4EY6. The ligand GNT
+is composed of 4 aromatic cycles, so, it is possible that it interacts
+with the protein by stacking interactions. We observed one such
+interaction between the ligand and tryptophan. Distance in of the 
+aromatic cycle was measured approximately to 3.7\AA, which is 
+reasonable distance for such interaction. This inteaction is visible
+in figures \ref{fig:contacts_1} and \ref{fig:contacts_3}.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{images/contacts_4ey6_1.png}
+    \\[\smallskipamount]
+    \includegraphics[width=0.98\linewidth]{images/contacts_4ey7_1.png}
+    \caption{\textbf{Binding-site contacts:} 
+    Comparision of protein binding-site non-covalent interactions 
+    of structures 4EY6 (green) ligated with GNT (red) and 
+    4EY7 (blue) ligated with E20 (yellow).}
+    \label{fig:contacts_1}
+\end{figure} 
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{images/contacts_4ey6_2.png}
+    \\[\smallskipamount]
+    \includegraphics[width=0.98\linewidth]{images/contacts_4ey7_2.png}
+    \caption{\textbf{Binding-site contacts:} 
+    Comparision of protein binding-site non-covalent interactions 
+    of structures 4EY6 (green) ligated with GNT (red) and 
+    4EY7 (blue) ligated with E20 (yellow).}
+    \label{fig:contacts_2}
+\end{figure} 
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{images/contacts_4ey6_3.png}
+    \\[\smallskipamount]
+    \includegraphics[width=0.98\linewidth]{images/contacts_4ey7_3.png}
+    \caption{\textbf{Binding-site contacts:} 
+    Comparision of protein binding-site non-covalent interactions 
+    of structures 4EY6 (green) ligated with GNT (red) and 
+    4EY7 (blue) ligated with E20 (yellow).}
+    \label{fig:contacts_3}
+\end{figure} 
 
 
+Apart of these interactions, we can also see non-covalent contacts of 
+sulfur from the GNT and histidine (distance 2.7\AA) on position and nitrogen
+from the GNT and tyrosine (distance 2.9\AA) on position TYR (337). 
+We can see the visualizations
+of all interactions in the figures \ref{fig:contacts_1}, 
+\ref{fig:contacts_2} and \ref{fig:contacts_3} (each figure is coupled 
+with 4EY7 compound based on the same view angle). At the end, 
+we should mention that there are few other aromatic amino acids 
+from the protein which might also be part of the stacking 
+interactions. Though, we did not visualize them because of the 
+higher uncertainty of existence of these bonds. All adepts for
+stacking interactions of this structure are the following 
+TRP (86), TYR (124), TYR (337) and PHE (338).
 
+In terms of the structure 4EY7, we see much more adepts of stacking 
+interactions. The stacking interactions are apart of the other figures visualized
+also in additional figure \ref{fig:contacts_4}.
+
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{images/contacts_4ey7_4.png}
+    \caption{\textbf{Stacking interactions of 4EY7:} 
+    Visualization to stress the possible stacking interactions in the
+    4EY7 complex. Ligand E20 is yellow.}
+    \label{fig:contacts_4}
+\end{figure}
+
+
+Ligand E20 is also composed of 4 aromatic rings and interacts by 
+stacking interactions with tryptophans and tyrosines of the protein
+(the distances are around 3.6\AA). The adepts for stacking interactions
+are the following amino acids of the AchE protein 
+TRP (86), TRP (286), TYR (337) and TYR (341).
+Apart from this interactions, 
+it also interacts with nitrogen in peptide backbone (PHE (295)) 
+in distance 2\AA.
+Comparision of the interactions between complexes 4EY6 and 4EY7 
+are shown in the figures \ref{fig:contacts_1}, \ref{fig:contacts_2}
+and \ref{fig:contacts_3}.
+  
+
+To sum up, both ligands are surprisingly very distinct in the shape.
+We cannot state for sure, but it looks that both ligands interact
+with the AchE protein mainly by the stacking interactions of its
+aromatic rings (mainly the same rings). 
+Despite, the difference of the ligands they both 
+serves the same function, which is inhibition of the AchE resulting
+in delay of Ach hydrolysis. 
 
 
 % Please use pisikabst.bst. You may your own *.bib file.
